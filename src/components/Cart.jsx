@@ -1,7 +1,8 @@
-import './Cart.css';
-import { useId } from 'react';
-import { CartIcon, ClearCartIcon } from './Icons.jsx';
-import { useCart } from '../hooks/useCart.js';
+import './Cart.css'
+
+import { useId } from 'react'
+import { CartIcon, ClearCartIcon } from './Icons.jsx'
+import { useCart } from '../hooks/useCart.js'
 
 function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
   return (
@@ -25,8 +26,8 @@ function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
 }
 
 export function Cart () {
-  const cartCheckboxId = useId();
-  const { cart, clearCart, addToCart } = useCart();
+  const cartCheckboxId = useId()
+  const { cart, clearCart, addToCart } = useCart()
 
   return (
     <>

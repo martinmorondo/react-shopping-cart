@@ -1,23 +1,43 @@
+h2 {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .cart {
     background: #000;
     display: none;
-    padding: 32px;
+    padding: 1.4rem;
     position: fixed;
     right: 0px;
     top: 0px;
-    width: 200px;
+    max-width: 235px;
+    min-width: 100px; 
+    overflow-y: auto; 
+    border-radius: 30px;
   }
   
   .cart img {
     aspect-ratio: 16/9;
     width: 100%;
   }
+
+  .cart ul {
+    max-height: 600px; 
+    overflow-y: auto; 
+  }
   
   .cart li {
     border-bottom: 1px solid #444;
     padding-bottom: 16px;
   }
-  
+
+  .cart .total-price {
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+    float: right;
+  }
+
   .cart footer {
     display: flex;
     gap: 8px;
@@ -38,7 +58,7 @@
     height: 32px;
     justify-content: center;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     right: 8px;
     top: 8px;
     transition: all .3s ease;
@@ -53,4 +73,20 @@
   .cart-button ~ input:checked ~ .cart {
     height: 100%;
     display: block;
+  }
+
+  .cart .btn-checkout {
+    margin: 20px 0;
+  }
+
+  .cart .modal-content {
+    margin: 20px 0;
+  }
+
+  .cart.model-content input {
+    margin: 35px 0;
+  }
+
+  .cart .modal-content button {
+    margin: 10px 5px;
   }
